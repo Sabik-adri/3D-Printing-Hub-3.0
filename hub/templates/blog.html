@@ -1,0 +1,133 @@
+{% extends 'nav-bar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uclean — Cleaning Service Website Template</title>
+    <link rel="icon" href="{% static 'jpg/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="Uclean — Cleaning Service Website Template" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="{% static 'css/bootstrap.min2.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/style-copy.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" >
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="blog.html#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+
+        <!-- header begin -->
+        <header class="header-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section style="background-color: #0a2e45;" class="section-dark text-light pb-0 relative overflow-hidden">
+                <img src="{% static 'jpg/deco/s1.webp' %}" class="w-5 mt-min-60 abs start-10 bottom-10 wow scaleOut" alt="">
+                <div id="shine-wrapper">
+                    <div class="template shine"></div>
+                </div>
+                <div class="container relative z-1000">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="relative z-1000">
+                                <h1 class="wow fadeInUp mb-2" data-wow-delay=".2s">Blog</h1>
+
+                                <p class="lead col-lg-10 mb-0 wow fadeInUp" data-wow-delay=".4s">Enjoy a spotless space with our expert cleaning team. Affordable, eco-friendly, and tailored to your needs!</p>
+
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img src="{% static 'jpg/misc/blog.png' %}" class="w-100" data-0="transform: translateY(0px);" data-500="transform: translateY(300px);" alt="">
+                            
+                    </div>
+
+                </div>
+            </section>
+            
+            <section>
+                <div class="container">
+                    <div class="row g-4">
+                        {% for blog in blogs %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="relative">
+                                <div class="post-image rounded-1 mb-2">
+                                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="height: 249.66px; width: 374.5px; object-fit: cover;" class="bject-cover rounded-1">
+                                    
+                                    <div class="abs start-0 top-0 bg-color-2 text-dark p-3 pb-2 m-3 text-center fw-600 rounded-1">
+                                        <div class="fs-36 mb-0">{{ blog.date|date:"d" }}</div>
+                                        <span>{{ blog.date|date:"M" }}</span>
+                                    </div>
+                                </div>
+                                <div class="pt-2 h-100">
+                                    <h4>{{ blog.title }}</h4>
+                                    <p class="mb-3">{{ blog.content|truncatewords:20 }}...</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+    </div>
+
+    <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/uclean-cleaning-service-website-template/56396174" target="_blank">Buy on <img src="demo/envato.png" class="" alt=""></a>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-1.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+
+    <script>
+    $(window).on("load", function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
+    });
+    </script>
+
+</html>
+{% endblock %}

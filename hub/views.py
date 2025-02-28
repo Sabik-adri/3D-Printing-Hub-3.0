@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from .models import Client
+from .models import Blog, Client
 from django.http import JsonResponse
 
 def home(request):
@@ -67,3 +67,28 @@ def toggle_status(request, client_id):
         except Client.DoesNotExist:
             return JsonResponse({'success': False, 'error': 'Client not found'})
     return JsonResponse({'success': False, 'error': 'Invalid request'})
+
+def plastic_service(request):
+    return render(request, 'service-single.html')
+
+
+def create_blog(request):
+    if request.method == 'POST':
+        try:
+            blog = Blog.objects.create(
+                title=request.POST['title'],
+                content=request.POST['content'],
+                image=request.FILES['image'],
+                date=request.POST['date'],
+                time=request.POST['time'],
+                created_by=request.user
+            )
+            return redirect('blog', blog.id)
+        except Exception as e:
+            return JsonResponse({'success': False, 'error': str(e)})
+    return render(request, 'create_blog.html')
+
+
+def blog(request):
+    blogs = Blog.objects.all()
+    return render(request, 'blog.html', {'blogs': blogs})

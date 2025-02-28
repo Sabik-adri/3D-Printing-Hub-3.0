@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>{{ blog.title }}</title>
+</head>
+<body>
+    <h2>{{ blog.title }}</h2>
+    <p><strong>Published by:</strong> {{ blog.created_by.username }} on {{ blog.date }} at {{ blog.time }}</p>
+    <img src="{{ blog.image.url }}" alt="Blog Image" width="400"><br>
+    <p>{{ blog.content }}</p>
+</body>
+</html>

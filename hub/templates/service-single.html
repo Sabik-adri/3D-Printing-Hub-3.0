@@ -1,0 +1,222 @@
+{% extends 'nav-bar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uclean — Cleaning Service Website Template</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <meta content="Uclean — Cleaning Service Website Template" name="description" >
+    <meta content="" name="keywords" >
+    <meta content="" name="author" >
+    <!-- CSS Files
+    ================================================== -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/style-copy.css' %}" rel="stylesheet" type="text/css" >
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" >
+
+    <link rel="shortcut icon" href="{% static 'jpg/fevicon.png' %}" type="">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="service-single.html#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+        <div class="header_bottom">
+            <div class="container-fluid">
+            </div>
+          </div>
+        <!-- header begin -->
+        <header class="header-light">
+            <div class="container">
+
+                
+                <div class="row">
+                    
+                    <div class="col-md-12">
+
+                        
+                        <div class="de-flex sm-pt10">
+                            
+                            {% comment %} navbar {% endcomment %}
+
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section style="background-color: #0a2e45;" class="section-dark text-light pb-0 relative overflow-hidden">
+                <img src="" class="w-5 mt-min-60 abs start-10 bottom-10 wow scaleOut" alt="">
+                <div id="shine-wrapper">
+                    <div class="template shine"></div>
+                </div>
+                <div class="container relative z-1000">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="relative z-1000">
+                                <h1 class="wow fadeInUp mb-2" data-wow-delay=".2s">FDM/FFF 3D Printing</h1>
+
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <img src="{% static 'jpg/misc/mparts.png' %}" class="w-70 h-70" data-0="transform: translateY(0px);" data-500="transform: translateY(300px);" alt="">
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="relative overflow-hidden">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <p class="lead">Plastic 3D printing, particularly through Fused Deposition Modeling (FDM) or Fused Filament Fabrication (FFF), is a popular and accessible method for creating three-dimensional objects. Here are some details about these services.</p>
+
+                            <div class="spacer-single"></div>
+
+                            <h3 class="mb-3">Applications</h3>
+                            <ul class="ul-style-2 fw-500">
+                                <li><strong>Prototyping:</strong> Quickly creating prototypes for testing form, fit, and function.</li>
+                                <li><strong>Custom Parts:</strong> Producing custom or replacement parts for various applications.</li>
+                                <li><strong>Education:</strong> Used in schools and universities for teaching and projects.</li>
+                                <li><strong>Art and Design:</strong> Creating intricate designs and models.</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="p-5 bg-color text-light rounded-1 h-100">
+                                <h3 class="mb-3">Why Choose Our FDM/FFF 3D Printing Services?</h3>
+                                <ul class="ol-style-1">
+                                    <li><strong>Advantages</strong>:
+                                        <ul>
+                                            <li><strong>Cost-Effective</strong>: Affordable for both hobbyists and professionals.</li>
+                                            <li><strong>Versatile</strong>: Capable of producing a wide range of geometries and designs.</li>
+                                            <li><strong>Accessible</strong>: Widely available and easy to use.</li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <h3 class="mb-0">Materials</h3>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-1/pla.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>PLA (Polylactic Acid)</h4>
+                            <p>Biodegradable and easy to print with, suitable for beginners and general use.</p>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-1/abs.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>ABS (Acrylonitrile Butadiene Styrene)</h4>
+                            <p>Stronger and more heat-resistant, often used for functional parts.</p>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-1/petg.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>PETG (Polyethylene Terephthalate Glycol)</h4>
+                            <p>Combines the ease of printing with PLA and the strength and durability of ABS.</p>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-1/tpu.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>TPU (Thermoplastic Polyurethane)</h4>
+                            <p>Flexible and elastic, used for parts requiring elasticity.</p>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-1/nylon.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Nylon</h4>
+                            <p>Strong, durable, and slightly flexible, used for functional parts that need high strength.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h3 class="mb-3">Considerations</h3>
+                        </div>
+                    </div>
+
+                    
+
+                        <div>
+                                <div>
+                                
+                                        <ul>
+                                            <li><strong>Layer Lines</strong>: Visible layer lines may require post-processing for a smoother finish.</li>
+                                            <li><strong>Strength</strong>: While suitable for many applications, parts may not be as strong as those produced with other methods (e.g., SLA, SLS).</li>
+                                        </ul>
+                                    </li>
+                                <div class="spacer-20"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+    </div>
+
+    <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/uclean-cleaning-service-website-template/56396174" target="_blank">Buy on <img src="demo/envato.png" class="" alt=""></a>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-1.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+
+    <script>
+    $(window).on("load", function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
+    });
+    </script>
+
+</html>
+{% endblock %}

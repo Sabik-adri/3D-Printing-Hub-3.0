@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Client(models.Model):
     name = models.CharField(max_length=255)
@@ -12,3 +13,18 @@ class Client(models.Model):
 class Login(models.Model):
     username = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
+    
+    
+class Blog(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    image = models.ImageField(upload_to='images/')
+    date = models.DateField()
+    time = models.TimeField()
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_created_by')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_updated_by', null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    deleted_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_deleted_by', null=True, blank=True)
+    deleted_at = models.DateTimeField(null=True, blank=True)
+

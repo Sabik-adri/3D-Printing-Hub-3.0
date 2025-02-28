@@ -1,0 +1,273 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="shortcut icon" href="{% static 'jpg/fevicon.png' %}" type="">
+  
+    <title> 3D-Printing-HUB </title>
+  
+  
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  
+    <!-- font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' https://fonts.gstatic.com;">
+  
+  
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+    <style>
+        .toast-container {
+          z-index: 1055; /* Ensure it appears on top */
+      }
+      .toast {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 0.25rem;
+      }
+      .toast-header {
+          background-color: #007bff;
+          color: #fff;
+      }
+      </style>
+    </head>
+
+<body>
+    <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="{% url 'home' %}">
+              <img src="{% static 'jpg/logo.png' %}" id="logo" alt="">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 90px;">
+              <ul class="navbar-nav">
+                  <li class="nav-item mega-dropdown">
+                      <a class="nav-link">SERVICES</a>
+                      <div class="mega-dropdown-content">
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <h3>3D PRINTING SERVICES</h3>
+                                  <a href="{% url 'plastic_service' %}">Plastic 3D Printing Services (FDM/FFF)</a>
+                                  <a href="#">Resin 3D Printing Services (SLA)</a>
+                                  <a href="#">Architectural 3D Printing</a>
+                                  <a href="#">PCB Enclosure 3D Printing</a>
+                                  <a href="#">Robotics Part 3D Printing</a>
+                                  <a href="#">Machine Spare Parts 3D Printing</a>
+                                  <a href="#">Prosthetic 3D Printing</a>
+                                  <a href="#">Jig and Fixture 3D Printing</a>
+                                  <a href="#">Custom 3D Printed Parts</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>DESIGN SERVICES</h3>
+                                  <a href="#">3D Concept Design</a>
+                                  <a href="#">3D Modeling</a>
+                                  <a href="#">3D CAD Design</a>
+                                  <a href="#">2D Engineering Drawing</a>
+                                  <a href="#">Product Design</a>
+                                  <a href="#">Industrial Design</a>
+                                  <a href="#">Product Rendering</a>
+                                  <a href="#">Design Simulation</a>
+                                  <a href="#">3D Scanning</a>
+                                  <a href="#">Reverse Engineering</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>MANUFACTURING SERVICES</h3>
+                                  <a href="#">Product Prototyping</a>
+                                  <a href="#">Low Volume Production</a>
+                                  <a href="#">Rapid Prototyping</a>
+                                  <a href="#">Silicone Molding</a>
+                                  <a href="#">Laser Cutting</a>
+                                  <a href="#">EDM Machining</a>
+                                  <a href="#">CNC Machining</a>
+                                  <a href="#">Product MVP</a>
+                              </div>
+                              <div class="col-md-3">
+                                  <h3>TRAINING</h3>
+                                  <a href="#">3D Printing Training</a>
+                                  <a href="#">3D Design Training</a>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">SHOP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">HOW IT WORKS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> CASE STUDY</a>
+                </li>
+                <li class="nav-item">
+                </li>
+                <li class="nav-item mega-dropdown-info">
+                  <a class="nav-link"> INFO</a>
+                  <div class="mega-dropdown-content">
+                      <div class="row">
+                          <div class="col-md-3">
+                            <a href="#">About Us</a>
+                            <a href="#">Design Guide</a>
+                            <a href="#">Material Data Sheets</a>
+                            <a href="#">Pricing Information</a>
+                            <a href="#">Quality Assurance</a>
+                            <a href="#">Tolerance & Accuracy</a>
+                            <a href="#">Gallery</a>
+                            <a href="#">FAQ</a>
+                          </div>
+                      </div>
+                  </div>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog' %}">BLOG</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+                </li>
+                <form class="form-inline">
+                  <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </ul>
+            </div>
+          </nav>
+
+          <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+        {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> {% endcomment %}
+
+        <section class="info_section layout_padding2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 info_col">
+                        <div class="info_contact">
+                            <h4 style="color: white;">Address</h4>
+                            <div class="contact_link_box">
+                                <a href="https://www.google.com/maps/place/3D+Printing+HUB/@23.7734183,90.4048089,18z">
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Location</span>
+                                </a>
+                                <a href="tel:+8801798553072">
+                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                    <span>Call +8801798553072</span>
+                                </a>
+                                <a href="mailto:3dprintinghubbd@gmail.com">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>3dprintinghubbd@gmail.com</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info_social">
+                            <a href="">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-twitter" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="">
+                              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 info_col">
+                        <div class="info_links">
+                            <h4 style="color: white;">3D Printing</h4>
+                            <a href="">3D PRINTING SERVICES</a>
+                            <a href="">DESIGN SERVICES</a>
+                            <a href="service.html">MANUFACTURING SERVICES</a>
+                            <a href="contact.html">TRAINING</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2 mx-auto info_col">
+                        <div class="info_link_box">
+                            <h4 style="color: white;">Links</h4>
+                            <div class="info_links">
+                                <a href="index.html"><img src="{% static 'jpg/nav-bullet.png' %}" alt=""> Home</a>
+                                <a href="about.html"><img src="{% static 'jpg/nav-bullet.png' %}" alt=""> About</a>
+                                <a href="service.html"><img src="{% static 'jpg/nav-bullet.png' %}" alt=""> Services</a>
+                                <a href="contact.html"><img src="{% static 'jpg/nav-bullet.png' %}" alt=""> Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 info_col">
+                        <h4></h4>
+                        <form action="{% url 'login' %}" method="get">
+                            <input type="text" placeholder="Admin Panel" readonly />
+                            <button type="submit">Restricted</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <p style="text-align: center;">&copy; Created by Sabik Hasan Adri</p>
+        </section>
+        <!-- End Info Section -->
+    
+        <!-- Footer Section -->
+    
+        <!-- Scripts -->
+        {% comment %} <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script> {% endcomment %}
+        <!-- popper js -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+          </script>
+        <!-- bootstrap js -->
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+        <!-- owl slider -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+        </script>
+        <!-- custom js -->
+        <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+        <!-- Google Map -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+        </script>
+
+
+     
+</body>
+
+
+</html>
