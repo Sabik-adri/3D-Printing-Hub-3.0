@@ -3,6 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from .models import Blog, Client
 from django.http import JsonResponse
+from django.shortcuts import render, get_object_or_404
 
 def home(request):
     return render(request, 'index.html')
@@ -92,3 +93,8 @@ def create_blog(request):
 def blog(request):
     blogs = Blog.objects.all()
     return render(request, 'blog.html', {'blogs': blogs})
+
+
+def blog_detail(request, pk):
+    blog = get_object_or_404(Blog, pk=pk)
+    return render(request, 'blog_detail.html', {'blog': blog})

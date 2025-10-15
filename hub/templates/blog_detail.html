@@ -1,0 +1,141 @@
+{% extends 'nav-bar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ blog.title }} - Blog</title>
+    <style>
+        .blog-content {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .blog-image {
+            flex: 0 0 400px;
+            height: 350px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .blog-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .blog-text {
+            flex: 1;
+        }
+        
+        .blog-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+        
+        .blog-body {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .blog-below {
+            margin-top: 25px;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .blog-meta {
+            font-size: 0.95em;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 25px;
+            line-height: 1.8;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .blog-content {
+                flex-direction: column;
+            }
+        
+            .blog-image {
+                width: 100%;
+                height: 250px;
+            }
+        
+            .blog-title {
+                font-size: 1.8em;
+            }
+        }                
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="blog-content">
+            <div class="blog-image">
+                {% if blog.image %}
+                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                {% else %}
+                    <div style="height: 100%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999;">No Image</div>
+                {% endif %}
+            </div>
+    
+            <div class="blog-text">
+                <h1 class="blog-title">{{ blog.title }}</h1>
+                <div class="blog-body">
+                    <div id="blog-summary"></div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- The rest of the content and meta info will be added dynamically -->
+        <div id="blog-below"></div>
+    
+        <div class="blog-meta" style="padding-bottom: 20px;">
+            <p><strong>Date:</strong> {{ blog.date }} {{ blog.time }}</p>
+            <p><strong>Author:</strong> {{ blog.created_by.username }}</p>
+            <p><strong>Created:</strong> {{ blog.created_at|date:"M d, Y H:i" }}
+            {% if blog.updated_at %} | <strong>Updated:</strong> {{ blog.updated_at|date:"M d, Y H:i" }}{% endif %}</p>
+        </div>
+    </div>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fullText = `{{ blog.content|linebreaksbr|safe }}`;
+    
+        // Split by whitespace
+        const words = fullText.split(/\s+/);
+        const summary = words.slice(0, 140).join(" ");
+        const rest = words.slice(140).join(" ");
+    
+        // Insert the first 140 words beside the image
+        document.getElementById("blog-summary").innerHTML = summary;
+    
+        // Add the rest of the content below the image
+        if (rest.trim()) {
+            document.getElementById("blog-below").innerHTML = `
+                <div class="blog-body blog-below">${rest}</div>
+            `;
+        }
+    });
+    </script>
+    
+    
+</body>
+</html>
+{% endblock %}

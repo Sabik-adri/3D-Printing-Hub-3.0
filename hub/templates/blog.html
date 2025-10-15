@@ -84,9 +84,9 @@
                     <div class="row g-4">
                         {% for blog in blogs %}
                         <div class="col-lg-4 col-md-6">
-                            <div class="relative">
+                            <div class="relative blog-card" data-url="{% url 'blog_detail' blog.pk %}">
                                 <div class="post-image rounded-1 mb-2">
-                                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="height: 249.66px; width: 374.5px; object-fit: cover;" class="bject-cover rounded-1">
+                                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="height: 249.66px; width: 374.5px; object-fit: cover;" class="object-cover rounded-1">
                                     
                                     <div class="abs start-0 top-0 bg-color-2 text-dark p-3 pb-2 m-3 text-center fw-600 rounded-1">
                                         <div class="fs-36 mb-0">{{ blog.date|date:"d" }}</div>
@@ -94,8 +94,8 @@
                                     </div>
                                 </div>
                                 <div class="pt-2 h-100">
-                                    <h4>{{ blog.title }}</h4>
-                                    <p class="mb-3">{{ blog.content|truncatewords:20 }}...</p>
+                                    <h4 class="text-dark">{{ blog.title }}</h4>
+                                    <p class="mb-3 text-muted">{{ blog.content|truncatewords:20 }}...</p>
                                 </div>
                             </div>
                         </div>
@@ -128,6 +128,18 @@
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
     });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".blog-card").forEach(card => {
+                card.style.cursor = "pointer";
+                card.addEventListener("click", function() {
+                    const url = this.getAttribute("data-url");
+                    window.location.href = url;
+                });
+            });
+        });
+        </script>
+        
 
 </html>
 {% endblock %}
