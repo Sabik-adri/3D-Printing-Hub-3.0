@@ -72,6 +72,9 @@ def toggle_status(request, client_id):
 def plastic_service(request):
     return render(request, 'service-single.html')
 
+def plastic_service_sla(request):
+    return render(request, 'service-single-sla.html')
+
 
 def create_blog(request):
     if request.method == 'POST':

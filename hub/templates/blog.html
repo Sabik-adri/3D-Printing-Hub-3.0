@@ -86,8 +86,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="relative blog-card" data-url="{% url 'blog_detail' blog.pk %}">
                                 <div class="post-image rounded-1 mb-2">
-                                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="height: 249.66px; width: 374.5px; object-fit: cover;" class="object-cover rounded-1">
-                                    
+                                    <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="height: 249.66px; width: 374.5px; object-fit: cover; z-index: 999999;" class="object-cover rounded-1">
                                     <div class="abs start-0 top-0 bg-color-2 text-dark p-3 pb-2 m-3 text-center fw-600 rounded-1">
                                         <div class="fs-36 mb-0">{{ blog.date|date:"d" }}</div>
                                         <span>{{ blog.date|date:"M" }}</span>

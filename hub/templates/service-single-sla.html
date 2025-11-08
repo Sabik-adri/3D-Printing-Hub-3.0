@@ -1,0 +1,189 @@
+{% extends 'nav-bar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resin 3D Printing Services — SLA Printing</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Resin 3D Printing Services — Stereolithography (SLA) Printing" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style-copy.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{% static 'jpg/fevicon.png' %}" type="">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="service-single.html#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+        <div class="header_bottom">
+            <div class="container-fluid">
+            </div>
+        </div>
+        <!-- header begin -->
+        <header class="header-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            {% comment %} navbar {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section style="background-color: #0a2e45;" class="section-dark text-light pb-0 relative overflow-hidden">
+                <img src="" class="w-5 mt-min-60 abs start-10 bottom-10 wow scaleOut" alt="">
+                <div id="shine-wrapper">
+                    <div class="template shine"></div>
+                </div>
+                <div class="container relative z-1000">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="relative z-1000">
+                                <h1 class="wow fadeInUp mb-2" data-wow-delay=".2s">Resin 3D Printing (SLA)</h1>
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="{% static 'jpg/misc/resin-parts.png' %}" class="w-70 h-70" data-0="transform: translateY(0px);" data-500="transform: translateY(300px);" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative overflow-hidden">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <p class="lead">Resin 3D printing, using Stereolithography (SLA), is a high-precision method for creating detailed three-dimensional objects with photopolymer resins. It is ideal for applications requiring fine details and smooth finishes.</p>
+                            <div class="spacer-single"></div>
+                            <h3 class="mb-3">Applications</h3>
+                            <ul class="ul-style-2 fw-500">
+                                <li><strong>Prototyping:</strong> High-detail prototypes for visual and functional testing.</li>
+                                <li><strong>Dental and Medical:</strong> Custom dental models, surgical guides, and prosthetics.</li>
+                                <li><strong>Jewelry:</strong> Intricate designs for investment casting.</li>
+                                <li><strong>Engineering:</strong> Functional parts and assemblies for testing and end-use.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5 bg-color text-light rounded-1 h-100">
+                                <h3 class="mb-3">Why Choose Our SLA 3D Printing Services?</h3>
+                                <ul class="ol-style-1">
+                                    <li><strong>Advantages</strong>:
+                                        <ul>
+                                            <li><strong>High Detail and Precision:</strong> Produces intricate parts with fine details.</li>
+                                            <li><strong>Smooth Surface Finish:</strong> Minimal layer lines for a polished look.</li>
+                                            <li><strong>Wide Range of Materials:</strong> Various resins for diverse applications.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <h3 class="mb-0">Materials</h3>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/standard-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Standard Resin</h4>
+                            <p>Versatile for general-purpose applications with good detail and finish.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/tough-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Tough Resin</h4>
+                            <p>Durable and wear-resistant, ideal for functional prototypes.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/flexible-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Flexible Resin</h4>
+                            <p>Elastic and flexible, suitable for parts requiring bendability.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/high-temp-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>High-Temperature Resin</h4>
+                            <p>Withstands high temperatures for thermal-resistant applications.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/castable-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Castable Resin</h4>
+                            <p>Designed for investment casting, used in jewelry and dentistry.</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <img src="{% static 'jpg/services/service-2/biocompatible-resin.png' %}" style="height: 230px; width: 310px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                            <h4>Biocompatible Resin</h4>
+                            <p>Safe for medical and dental applications, meeting regulatory standards.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <h3 class="mb-3">Considerations</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><strong>Post-Processing:</strong> Requires cleaning and curing, adding to production time.</li>
+                            <li><strong>Material Cost:</strong> Resins are often more expensive than filament-based printing.</li>
+                            <li><strong>Brittleness:</strong> Some resins may be brittle, limiting certain applications.</li>
+                        </ul>
+                        <div class="spacer-20"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+    </div>
+
+    <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/uclean-cleaning-service-website-template/56396174" target="_blank">Buy on <img src="demo/envato.png" class="" alt=""></a>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-1.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+    <script>
+    $(window).on("load", function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
+    });
+    </script>
+</html>
+{% endblock %}

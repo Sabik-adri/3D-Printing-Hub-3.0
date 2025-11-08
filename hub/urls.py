@@ -13,6 +13,8 @@ urlpatterns = [
     path('toggle-status/<int:client_id>/', views.toggle_status, name='toggle_status'),  # New URL
     
     path('plastic-service/', views.plastic_service, name='plastic_service'),
+    path('plastic-service-sla/', views.plastic_service_sla, name='plastic_service_sla'),
+
     
     path('create-blog/', views.create_blog, name='create_blog'),
     path('blog/', views.blog, name='blog'),
