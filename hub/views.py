@@ -75,6 +75,30 @@ def plastic_service(request):
 def plastic_service_sla(request):
     return render(request, 'service-single-sla.html')
 
+def plastic_service_architectural(request):
+    return render(request, 'service-single-architectural.html')
+
+def plastic_service_pcb(request):
+    return render(request, 'service-single-pcb.html')
+
+def plastic_service_robotics(request):
+    return render(request, 'service-single-robotics.html')
+
+def plastic_service_machine_spare_sparts(request):
+    return render(request, 'service-single-machine-spare-parts.html')
+
+def plastic_service_prosthetic(request):
+    return render(request, 'service-single-prosthetic.html')
+
+def plastic_service_jig_and_fixture(request):
+    return render(request, 'service-single-jig-and-fixture.html')
+
+def plastic_service_Custom(request):
+    return render(request, 'service-single-custom.html')
+
+def plastic_service_concept(request):
+    return render(request, 'service-single-concept.html')
+
 
 def create_blog(request):
     if request.method == 'POST':

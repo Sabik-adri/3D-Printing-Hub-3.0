@@ -69,17 +69,17 @@
                                   <h3>3D PRINTING SERVICES</h3>
                                   <a href="{% url 'plastic_service' %}">Plastic 3D Printing Services (FDM/FFF)</a>
                                   <a href="{% url 'plastic_service_sla' %}">Resin 3D Printing Services (SLA)</a>
-                                  <a href="#">Architectural 3D Printing</a>
-                                  <a href="#">PCB Enclosure 3D Printing</a>
-                                  <a href="#">Robotics Part 3D Printing</a>
-                                  <a href="#">Machine Spare Parts 3D Printing</a>
-                                  <a href="#">Prosthetic 3D Printing</a>
-                                  <a href="#">Jig and Fixture 3D Printing</a>
-                                  <a href="#">Custom 3D Printed Parts</a>
+                                  <a href="{% url 'plastic_service_architectural' %}">Architectural 3D Printing</a>
+                                  <a href="{% url 'plastic_service_pcb' %}">PCB Enclosure 3D Printing</a>
+                                  <a href="{% url 'plastic_service_robotics' %}">Robotics Part 3D Printing</a>
+                                  <a href="{% url 'plastic_service_machine_spare_sparts' %}">Machine Spare Parts 3D Printing</a>
+                                  <a href="{% url 'plastic_service_prosthetic' %}">Prosthetic 3D Printing</a>
+                                  <a href="{% url 'plastic_service_jig_and_fixture' %}">Jig and Fixture 3D Printing</a>
+                                  <a href="{% url 'plastic_service_Custom' %}">Custom 3D Printed Parts</a>
                               </div>
                               <div class="col-md-3">
                                   <h3>DESIGN SERVICES</h3>
-                                  <a href="#">3D Concept Design</a>
+                                  <a href="{% url 'plastic_service_concept' %}">3D Concept Design</a>
                                   <a href="#">3D Modeling</a>
                                   <a href="#">3D CAD Design</a>
                                   <a href="#">2D Engineering Drawing</a>
@@ -101,11 +101,11 @@
                                   <a href="#">CNC Machining</a>
                                   <a href="#">Product MVP</a>
                               </div>
-                              <div class="col-md-3">
+                              {% comment %} <div class="col-md-3">
                                   <h3>TRAINING</h3>
                                   <a href="#">3D Printing Training</a>
                                   <a href="#">3D Design Training</a>
-                              </div>
+                              </div> {% endcomment %}
                           </div>
                       </div>
                   </li>

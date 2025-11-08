@@ -14,6 +14,14 @@ urlpatterns = [
     
     path('plastic-service/', views.plastic_service, name='plastic_service'),
     path('plastic-service-sla/', views.plastic_service_sla, name='plastic_service_sla'),
+    path('plastic-service-architectural/', views.plastic_service_architectural, name='plastic_service_architectural'),
+    path('plastic-service-pcb/', views.plastic_service_pcb, name='plastic_service_pcb'),
+    path('plastic-service-robotics/', views.plastic_service_robotics, name='plastic_service_robotics'),
+    path('plastic-service-machine-spare-sparts/', views.plastic_service_machine_spare_sparts, name='plastic_service_machine_spare_sparts'),
+    path('plastic-service-prosthetic/', views.plastic_service_prosthetic, name='plastic_service_prosthetic'),
+    path('plastic-service-jig-and-fixture/', views.plastic_service_jig_and_fixture, name='plastic_service_jig_and_fixture'),
+    path('plastic-service-custom/', views.plastic_service_Custom, name='plastic_service_Custom'),
+    path('plastic-service-concept/', views.plastic_service_concept, name='plastic_service_concept'),
 
     
     path('create-blog/', views.create_blog, name='create_blog'),
