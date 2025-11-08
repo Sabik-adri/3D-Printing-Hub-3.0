@@ -125,3 +125,16 @@ def blog(request):
 def blog_detail(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
     return render(request, 'blog_detail.html', {'blog': blog})
+
+
+def how_it_works(request):
+    return render(request, 'how_it_works.html')
+
+def design_guide(request):
+    return render(request, 'design_guide.html')
+
+def material_data_sheets(request):
+    return render(request, 'material_data_sheets.html')
+
+def tolerance_and_accuracy(request):
+    return render(request, 'tolerance_and_accuracy.html')

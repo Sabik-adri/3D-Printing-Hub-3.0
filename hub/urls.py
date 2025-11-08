@@ -27,6 +27,10 @@ urlpatterns = [
     path('create-blog/', views.create_blog, name='create_blog'),
     path('blog/', views.blog, name='blog'),
     path('blog/<int:pk>/', views.blog_detail, name='blog_detail'),
+    path('how-it-works/', views.how_it_works, name='how_it_works'),
+    path('design-guide/', views.design_guide, name='design_guide'),
+    path('material-data-sheets/', views.material_data_sheets, name='material_data_sheets'),
+    path('tolerance-and-accuracy', views.tolerance_and_accuracy, name='tolerance_and_accuracy'),
     
     
 ]

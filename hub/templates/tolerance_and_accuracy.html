@@ -1,0 +1,226 @@
+{% extends 'nav-bar.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>3D Printing Tolerance & Accuracy Guide</title>
+    <link rel="icon" href="{% static 'images/icon.png' %}" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="3D Printing Tolerance & Accuracy Guide — Achieve Precise Results" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
+    <!-- CSS Files -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style-copy.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css">
+    <!-- color scheme -->
+    <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="{% static 'jpg/fevicon.png' %}" type="">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="float-text show-on-scroll">
+            <span><a href="service-single.html#">Scroll to top</a></span>
+        </div>
+        <div class="scrollbar-v show-on-scroll"></div>
+
+        <!-- page preloader begin -->
+        <div id="de-loader"></div>
+        <!-- page preloader close -->
+        <div class="header_bottom">
+            <div class="container-fluid">
+            </div>
+        </div>
+        <!-- header begin -->
+        <header class="header-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            {% comment %} navbar {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section style="background-color: #0a2e45;" class="section-dark text-light pb-0 relative overflow-hidden">
+                <div id="shine-wrapper">
+                    <div class="template shine"></div>
+                </div>
+                <div class="container relative z-1000">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-12">
+                            <div class="relative z-1000">
+                                <h1 class="wow fadeInUp mb-2" data-wow-delay=".2s">3D Printing Tolerance & Accuracy Guide</h1>
+                                <div class="spacer-single"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative overflow-hidden">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <p class="lead">Understanding tolerance and accuracy in 3D printing is essential for producing parts that meet precise design requirements, ensuring fit and functionality.</p>
+                            <div class="spacer-single"></div>
+                            <h3 class="mb-3">Why Tolerance & Accuracy Matter</h3>
+                            <ul class="ul-style-2 fw-500">
+                                <li><strong>Precision:</strong> Achieve parts that closely match design specifications.</li>
+                                <li><strong>Fit and Function:</strong> Ensure components fit together correctly for assemblies.</li>
+                                <li><strong>Quality Control:</strong> Minimize errors and improve part reliability.</li>
+                                <li><strong>Cost Efficiency:</strong> Reduce rework by optimizing designs for printing accuracy.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="p-5 bg-color text-light rounded-1 h-100">
+                                <h3 class="mb-3">Key Concepts</h3>
+                                <ul class="ol-style-1">
+                                    <li><strong>Tolerance</strong>:
+                                        <ul>
+                                            <li>Allowable variation in dimensions from the intended design.</li>
+                                            <li>Ensures parts remain functional within acceptable limits.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Accuracy</strong>:
+                                        <ul>
+                                            <li>How closely printed dimensions match the design.</li>
+                                            <li>Critical for high-precision applications.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <h3 class="mb-0">Factors Affecting Tolerance & Accuracy</h3>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4>Printer Type and Technology</h4>
+                            <ul>
+                                <li><strong>FDM/FFF:</strong> ±0.1 to ±0.5 mm tolerances.</li>
+                                <li><strong>SLA/DLP:</strong> ±0.05 to ±0.1 mm for high accuracy.</li>
+                                <li><strong>SLS:</strong> ±0.1 to ±0.2 mm with good repeatability.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4>Material Properties</h4>
+                            <ul>
+                                <li><strong>Thermal Expansion:</strong> Materials like ABS may warp due to temperature changes.</li>
+                                <li><strong>Shrinkage:</strong> Thermoplastics shrink slightly after cooling.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4>Design Factors</h4>
+                            <ul>
+                                <li><strong>Feature Size:</strong> Small details are prone to inaccuracies.</li>
+                                <li><strong>Wall Thickness:</strong> Thin walls may not print accurately.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4>Printing Parameters</h4>
+                            <ul>
+                                <li><strong>Layer Height:</strong> Finer layers improve detail but increase print time.</li>
+                                <li><strong>Print Speed:</strong> Higher speeds may reduce accuracy.</li>
+                                <li><strong>Temperature:</strong> Proper settings prevent warping and adhesion issues.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4>Post-Processing</h4>
+                            <ul>
+                                <li><strong>Sanding/Finishing:</strong> Improves tolerances and surface quality.</li>
+                                <li><strong>Assembly:</strong> Design tolerances to accommodate slight variations.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4 class="mb-3">Tolerance Specifications</h4>
+                            <ul>
+                                <li><strong>FDM/FFF:</strong> ±0.1 to ±0.5 mm, depending on printer and settings.</li>
+                                <li><strong>SLA/DLP:</strong> ±0.05 to ±0.1 mm for high-precision parts.</li>
+                                <li><strong>SLS:</strong> ±0.1 to ±0.2 mm with consistent results.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h4 class="mb-3">Tips for Improving Tolerance & Accuracy</h4>
+                            <ul>
+                                <li><strong>Calibrate Printer:</strong> Ensure consistent performance.</li>
+                                <li><strong>Optimize Settings:</strong> Adjust layer height, speed, and temperature.</li>
+                                <li><strong>Choose Material:</strong> Select materials with stable properties.</li>
+                                <li><strong>Test and Iterate:</strong> Validate tolerances with test prints.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <h3 class="mb-3">Examples of Tolerances for Common Applications</h3>
+                            <ul>
+                                <li><strong>Interlocking Parts:</strong> Use 0.2-0.5 mm clearance for proper fit.</li>
+                                <li><strong>Functional Parts:</strong> Aim for ±0.1 mm tolerances for moving or load-bearing components.</li>
+                                <li><strong>Cosmetic Parts:</strong> ±0.5 mm tolerances are often sufficient for non-functional parts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative">
+                <div class="container">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <h3 class="mb-3">Conclusion</h3>
+                            <p>By understanding tolerance and accuracy factors, you can design and print parts that meet precise requirements. Contact us for specific guidance or support with your project.</p>
+                        </div>
+                    </div>
+                    <div class="spacer-20"></div>
+                </div>
+            </section>
+
+            <section class="relative">
+                <div class="container d-flex justify-content-center" style="">
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <img src="{% static 'jpg/misc/chart2.png' %}" style="height: 425px; width: 800px; object-fit: cover;" class="rounded-1 mb-3" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+    </div>
+
+    <div id="buy-now" class="show-on-scroll">
+        <a class="btn-buy" href="https://themeforest.net/item/uclean-cleaning-service-website-template/56396174" target="_blank">Buy on <img src="demo/envato.png" class="" alt=""></a>
+    </div>
+
+    <!-- Javascript Files -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-1.js' %}"></script>
+    <script src="{% static 'js/jquery.event.move.js' %}"></script>
+    <script src="{% static 'js/jquery.twentytwenty.js' %}"></script>
+    <script>
+    $(window).on("load", function(){
+      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
+      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
+    });
+    </script>
+</html>
+{% endblock %}

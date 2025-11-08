@@ -113,7 +113,7 @@
                   <a class="nav-link" href="">SHOP</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="">HOW IT WORKS</a>
+                  <a class="nav-link" href="{% url 'how_it_works' %}">HOW IT WORKS</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html"> CASE STUDY</a>
@@ -126,11 +126,11 @@
                       <div class="row">
                           <div class="col-md-3">
                             <a href="#">About Us</a>
-                            <a href="#">Design Guide</a>
-                            <a href="#">Material Data Sheets</a>
+                            <a href="{% url 'design_guide' %}">Design Guide</a>
+                            <a href="{% url 'material_data_sheets' %}">Material Data Sheets</a>
                             <a href="#">Pricing Information</a>
                             <a href="#">Quality Assurance</a>
-                            <a href="#">Tolerance & Accuracy</a>
+                            <a href="{% url 'tolerance_and_accuracy' %}">Tolerance & Accuracy</a>
                             <a href="#">Gallery</a>
                             <a href="#">FAQ</a>
                           </div>
