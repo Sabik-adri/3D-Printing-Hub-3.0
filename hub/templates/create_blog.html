@@ -1,27 +1,68 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Create Blog</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
+
+<div class="form-container">
     <h2>Create a New Blog</h2>
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
-        <label>Title:</label>
-        <input type="text" name="title" required><br>
-        
-        <label>Content:</label>
-        <textarea name="content" required></textarea><br>
-        
-        <label>Image:</label>
-        <input type="file" name="image" required><br>
-        
-        <label>Date:</label>
-        <input type="date" name="date" required><br>
-        
-        <label>Time:</label>
-        <input type="time" name="time" required><br>
-        
-        <button type="submit">Create Blog</button>
+
+        <div class="mb-3">
+            <label class="form-label">Title:</label>
+            <input type="text" class="form-control" name="title" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Content:</label>
+            <textarea class="form-control" name="content" rows="5" required></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Image:</label>
+            <input type="file" class="form-control" name="image" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Date:</label>
+            <input type="date" class="form-control" name="date" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Time:</label>
+            <input type="time" class="form-control" name="time" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Create Blog</button>
     </form>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -4,9 +4,20 @@ from django.contrib.auth.decorators import login_required
 from .models import Blog, Client
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
+from .models import Employee
+from .forms import EmployeeForm
 
 def home(request):
-    return render(request, 'index.html')
+    employees = Employee.objects.all()
+
+    # Group employees into chunks of 3
+    def chunked(qs, n):
+        for i in range(0, len(qs), n):
+            yield qs[i:i+n]
+
+    employee_groups = list(chunked(list(employees), 3))
+
+    return render(request, 'index.html', {'employee_groups': employee_groups})
 
 def book(request):
     if request.method == 'POST':
@@ -138,3 +149,35 @@ def material_data_sheets(request):
 
 def tolerance_and_accuracy(request):
     return render(request, 'tolerance_and_accuracy.html')
+
+
+
+def employee_list(request):
+    employees = Employee.objects.all()
+    return render(request, 'employee_list.html', {'employees': employees})
+
+def employee_create(request):
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('employee_list')
+    else:
+        form = EmployeeForm()
+    return render(request, 'employee_form.html', {'form': form})
+
+def employee_edit(request, pk):
+    employee = get_object_or_404(Employee, pk=pk)
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST, request.FILES, instance=employee)
+        if form.is_valid():
+            form.save()
+            return redirect('employee_list')
+    else:
+        form = EmployeeForm(instance=employee)
+    return render(request, 'employee_form.html', {'form': form})
+
+def employee_delete(request, pk):
+    employee = get_object_or_404(Employee, pk=pk)
+    employee.delete()
+    return redirect('employee_list')

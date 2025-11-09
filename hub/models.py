@@ -27,4 +27,14 @@ class Blog(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     deleted_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_deleted_by', null=True, blank=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
+    
+    
+class Employee(models.Model):
+    name = models.CharField(max_length=100)
+    designation = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='employee_photos/')
+    description = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
 

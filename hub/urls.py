@@ -33,6 +33,12 @@ urlpatterns = [
     path('tolerance-and-accuracy', views.tolerance_and_accuracy, name='tolerance_and_accuracy'),
     
     
+    path('employee-list/', views.employee_list, name='employee_list'),
+    path('employee-create/', views.employee_create, name='employee_create'),
+    path('employee-edit/<int:pk>/', views.employee_edit, name='employee_edit'),
+    path('employee-delete/<int:pk>/', views.employee_delete, name='employee_delete'),
+    
+    
 ]
 
 if settings.DEBUG:
